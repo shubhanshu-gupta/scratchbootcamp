@@ -22,6 +22,14 @@
                 animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
             }
         }
+        .faq-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .faq-active .faq-content {
+            max-height: 500px;
+        }
     </style>
 </head>
 <body class="bg-gray-50">
@@ -183,7 +191,7 @@
                 </div>
                 <div>
                     <h3 class="text-xl font-semibold mb-2">What You'll Need</h3>
-                    <p>A laptop with internet connection - all other materials will be provided</p>
+                    <p>A laptop and a curious mind - all other materials will be provided</p>
                 </div>
             </div>
         </div>
@@ -198,12 +206,15 @@
                 <!-- FAQ Accordion -->
                 <div class="space-y-4">
                     <!-- Age/Experience Section -->
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                        <button class="w-full px-6 py-4 text-left font-semibold text-purple-800 focus:outline-none">
-                            Who can join this bootcamp?
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden faq-item">
+                        <button class="w-full px-6 py-4 text-left font-semibold text-purple-800 focus:outline-none faq-toggle flex justify-between items-center">
+                            <span>Who can join this bootcamp?</span>
+                            <svg class="w-6 h-6 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
                         </button>
-                        <div class="px-6 pb-4">
-                            <div class="border-t border-gray-200 pt-4">
+                        <div class="faq-content">
+                            <div class="px-6 pb-4 border-t border-gray-200 pt-4">
                                 <p class="mb-3"><span class="font-semibold">Age Group:</span> This bootcamp is designed for children aged 8-11 years.</p>
                                 
                                 <p class="mb-3"><span class="font-semibold">Prior Experience:</span> No prior programming experience is required! Scratch is actually designed as one of the first stepping stones into programming. The intention is to give your child initial exposure and, over time, introduce them to fundamental computer science concepts.</p>
@@ -214,12 +225,15 @@
                     </div>
                     
                     <!-- Logistics Section -->
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                        <button class="w-full px-6 py-4 text-left font-semibold text-purple-800 focus:outline-none">
-                            Class logistics and requirements
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden faq-item">
+                        <button class="w-full px-6 py-4 text-left font-semibold text-purple-800 focus:outline-none faq-toggle flex justify-between items-center">
+                            <span>Class logistics and requirements</span>
+                            <svg class="w-6 h-6 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
                         </button>
-                        <div class="px-6 pb-4">
-                            <div class="border-t border-gray-200 pt-4">
+                        <div class="faq-content">
+                            <div class="px-6 pb-4 border-t border-gray-200 pt-4">
                                 <p class="mb-3"><span class="font-semibold">Location:</span> Classes will be held in-person at The Bayshore. Specific details will be shared with registered participants.</p>
                                 
                                 <p class="mb-3"><span class="font-semibold">Schedule:</span> Saturday mornings, 1 hour per session, for 4 consecutive weeks. Exact timings will be communicated later.</p>
@@ -230,8 +244,159 @@
                     </div>
                     
                     <!-- Curriculum Section -->
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                        <button class="w-full px-6 py-4 text-left font-semibold text-purple-800 focus:outline-none">
-                            About the curriculum and approach
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden faq-item">
+                        <button class="w-full px-6 py-4 text-left font-semibold text-purple-800 focus:outline-none faq-toggle flex justify-between items-center">
+                            <span>About the curriculum and approach</span>
+                            <svg class="w-6 h-6 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
                         </button>
-                        
+                        <div class="faq-content">
+                            <div class="px-6 pb-4 border-t border-gray-200 pt-4">
+                                <p class="mb-3"><span class="font-semibold">Teaching Method:</span> Our approach combines direct instruction with guided exploration. Children will learn through hands-on activities, challenges, and creative projects.</p>
+                                
+                                <p class="mb-3"><span class="font-semibold">Skill Development:</span> Beyond programming, we focus on developing computational thinking, problem-solving, and creativity. These skills extend far beyond coding and are valuable in many aspects of academic and personal growth.</p>
+                                
+                                <p><span class="font-semibold">Project-Based Learning:</span> Each session builds toward creating tangible projects that children can share with friends and family. This approach keeps them engaged and provides a sense of accomplishment.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Pricing Section -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden faq-item">
+                        <button class="w-full px-6 py-4 text-left font-semibold text-purple-800 focus:outline-none faq-toggle flex justify-between items-center">
+                            <span>Pricing and registration</span>
+                            <svg class="w-6 h-6 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="faq-content">
+                            <div class="px-6 pb-4 border-t border-gray-200 pt-4">
+                                <p class="mb-3"><span class="font-semibold">Pricing:</span> For this pilot program, we are offering a special introductory rate of $120 for the full 4-week program.</p>
+                                
+                                <p class="mb-3"><span class="font-semibold">Registration Process:</span> To register, click the "Register Now" button above and fill out the brief form. We'll then send you a confirmation email with payment instructions.</p>
+                                
+                                <p><span class="font-semibold">Limited Spots:</span> To ensure quality instruction and adequate attention for each child, we're limiting this pilot batch to 10 students. Register soon to secure your spot!</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- After Program Section -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden faq-item">
+                        <button class="w-full px-6 py-4 text-left font-semibold text-purple-800 focus:outline-none faq-toggle flex justify-between items-center">
+                            <span>What happens after the program?</span>
+                            <svg class="w-6 h-6 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="faq-content">
+                            <div class="px-6 pb-4 border-t border-gray-200 pt-4">
+                                <p class="mb-3"><span class="font-semibold">Continued Learning:</span> Students will have lifetime access to all course materials and projects created during the program.</p>
+                                
+                                <p class="mb-3"><span class="font-semibold">Future Opportunities:</span> Based on the success of this pilot program, we plan to offer advanced courses and coding clubs for continued learning.</p>
+                                
+                                <p><span class="font-semibold">Showcase:</span> At the end of the program, we'll host a virtual showcase where students can present their projects to family and friends.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Registration Form -->
+    <div class="container mx-auto px-4 py-16" id="register">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-3xl font-bold mb-8 text-center">Register Now</h2>
+            <form class="bg-white p-8 rounded-lg shadow-md">
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="parent-name">
+                        Parent/Guardian Name
+                    </label>
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="parent-name" type="text" placeholder="Your Name">
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="child-name">
+                        Child's Name
+                    </label>
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="child-name" type="text" placeholder="Child's Name">
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="child-age">
+                        Child's Age
+                    </label>
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="child-age" type="number" placeholder="Age">
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
+                        Email
+                    </label>
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" placeholder="Email">
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="phone">
+                        Phone Number
+                    </label>
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="phone" type="tel" placeholder="Phone Number">
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="experience">
+                        Any prior coding experience?
+                    </label>
+                    <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="experience" placeholder="Please describe any prior experience with coding or technology (if any)"></textarea>
+                </div>
+                <div class="flex items-center justify-between">
+                    <button class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+                        Submit Registration
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-purple-800 text-white">
+        <div class="container mx-auto px-4 py-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <h3 class="text-xl font-bold">Kids Scratch Programming Workshop</h3>
+                    <p>Empowering the next generation of creators</p>
+                </div>
+                <div>
+                    <p>© 2025 Kids Scratch Programming Workshop. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Add JavaScript for FAQ accordion -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqToggles = document.querySelectorAll('.faq-toggle');
+            
+            faqToggles.forEach(toggle => {
+                toggle.addEventListener('click', function() {
+                    const faqItem = this.closest('.faq-item');
+                    
+                    // Check if the current item is already active
+                    const isActive = faqItem.classList.contains('faq-active');
+                    
+                    // Close all FAQ items
+                    document.querySelectorAll('.faq-item').forEach(item => {
+                        item.classList.remove('faq-active');
+                        const icon = item.querySelector('svg');
+                        icon.classList.remove('rotate-180');
+                    });
+                    
+                    // If it wasn't active before, open it
+                    if (!isActive) {
+                        faqItem.classList.add('faq-active');
+                        const icon = this.querySelector('svg');
+                        icon.classList.add('rotate-180');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
