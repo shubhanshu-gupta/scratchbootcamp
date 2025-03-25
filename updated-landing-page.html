@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kids Scratch Programming Workshop</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(90deg, #6e48aa 0%, #9d50bb 100%);
+        }
+        .animate-bounce-slow {
+            animation: bounce 2s infinite;
+        }
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(-5%);
+                animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+            }
+            50% {
+                transform: translateY(0);
+                animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+            }
+        }
+        .faq-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .faq-active .faq-content {
+            max-height: 500px;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Hero Section -->
+    <div class="bg-purple-600 text-white">
+        <div class="container mx-auto px-4 py-16">
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <h1 class="text-4xl font-bold mb-4">Create Stories, Games, and Animations with Scratch!</h1>
+                    <p class="text-xl mb-8">A 4-week creative coding adventure for young minds</p>
+                    <div class="flex gap-4">
+                        <a href="#register" class="bg-yellow-400 text-purple-900 px-6 py-3 rounded-lg font-semibold hover:bg-yellow-300 transition-colors">Register Now</a>
+                        <a href="#learn-more" class="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-500 transition-colors">Learn More</a>
+                    </div>
+                </div>
+                <div class="aspect-video rounded-lg overflow-hidden shadow-xl">
+                    <iframe 
+                        width="100%" 
+                        height="100%" 
+                        src="https://www.youtube.com/embed/ssoRNCtmhVM" 
+                        title="Introduction to Scratch Programming" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rest of the content remains the same... -->
+
+    <!-- Registration Form -->
+    <div class="container mx-auto px-4 py-16" id="register">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-3xl font-bold mb-8 text-center">Register Now</h2>
+            <form action="https://formspree.io/f/YOUR_FORMSPREE_ENDPOINT" method="POST" class="bg-white p-8 rounded-lg shadow-md">
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="parent-name">
+                        Parent/Guardian Name
+                    </label>
+                    <input name="parent-name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="parent-name" type="text" placeholder="Your Name" required>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="child-name">
+                        Child's Name
+                    </label>
+                    <input name="child-name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="child-name" type="text" placeholder="Child's Name" required>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="child-age">
+                        Child's Age
+                    </label>
+                    <input name="child-age" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="child-age" type="number" placeholder="Age" required>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
+                        Email
+                    </label>
+                    <input name="_replyto" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" placeholder="Email" required>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="phone">
+                        Phone Number
+                    </label>
+                    <input name="phone" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="phone" type="tel" placeholder="Phone Number" required>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="experience">
+                        Any prior coding experience?
+                    </label>
+                    <textarea name="experience" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="experience" placeholder="Please describe any prior experience with coding or technology (if any)"></textarea>
+                </div>
+                <input type="hidden" name="_subject" value="New Registration for Kids Scratch Programming Workshop">
+                <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html">
+                <div class="flex items-center justify-between">
+                    <button type="submit" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                        Submit Registration
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-purple-800 text-white">
+        <div class="container mx-auto px-4 py-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <h3 class="text-xl font-bold">Kids Scratch Programming Workshop</h3>
+                    <p>Empowering the next generation of creators</p>
+                </div>
+                <div>
+                    <p>© 2025 Kids Scratch Programming Workshop. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Add JavaScript for FAQ accordion -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqToggles = document.querySelectorAll('.faq-toggle');
+            
+            faqToggles.forEach(toggle => {
+                toggle.addEventListener('click', function() {
+                    const faqItem = this.closest('.faq-item');
+                    
+                    // Check if the current item is already active
+                    const isActive = faqItem.classList.contains('faq-active');
+                    
+                    // Close all FAQ items
+                    document.querySelectorAll('.faq-item').forEach(item => {
+                        item.classList.remove('faq-active');
+                        const icon = item.querySelector('svg');
+                        icon.classList.remove('rotate-180');
+                    });
+                    
+                    // If it wasn't active before, open it
+                    if (!isActive) {
+                        faqItem.classList.add('faq-active');
+                        const icon = this.querySelector('svg');
+                        icon.classList.add('rotate-180');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
