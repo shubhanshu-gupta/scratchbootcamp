@@ -308,45 +308,47 @@
     <div class="container mx-auto px-4 py-16" id="register">
         <div class="max-w-3xl mx-auto">
             <h2 class="text-3xl font-bold mb-8 text-center">Register Now</h2>
-            <form class="bg-white p-8 rounded-lg shadow-md">
+            <form action="https://formspree.io/f/xeoazjza" method="POST" class="bg-white p-8 rounded-lg shadow-md">
                 <div class="mb-4">
                     <label class="block text-gray-700 text-sm font-bold mb-2" for="parent-name">
                         Parent/Guardian Name
                     </label>
-                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="parent-name" type="text" placeholder="Your Name">
+                    <input name="parent-name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="parent-name" type="text" placeholder="Your Name" required>
                 </div>
                 <div class="mb-4">
                     <label class="block text-gray-700 text-sm font-bold mb-2" for="child-name">
                         Child's Name
                     </label>
-                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="child-name" type="text" placeholder="Child's Name">
+                    <input name="child-name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="child-name" type="text" placeholder="Child's Name" required>
                 </div>
                 <div class="mb-4">
                     <label class="block text-gray-700 text-sm font-bold mb-2" for="child-age">
                         Child's Age
                     </label>
-                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="child-age" type="number" placeholder="Age">
+                    <input name="child-age" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="child-age" type="number" placeholder="Age" required>
                 </div>
                 <div class="mb-4">
                     <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
                         Email
                     </label>
-                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" placeholder="Email">
+                    <input name="_replyto" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" placeholder="Email" required>
                 </div>
                 <div class="mb-4">
                     <label class="block text-gray-700 text-sm font-bold mb-2" for="phone">
                         Phone Number
                     </label>
-                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="phone" type="tel" placeholder="Phone Number">
+                    <input name="phone" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="phone" type="tel" placeholder="Phone Number" required>
                 </div>
                 <div class="mb-4">
                     <label class="block text-gray-700 text-sm font-bold mb-2" for="experience">
                         Any prior coding experience?
                     </label>
-                    <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="experience" placeholder="Please describe any prior experience with coding or technology (if any)"></textarea>
+                    <textarea name="experience" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="experience" placeholder="Please describe any prior experience with coding or technology (if any)"></textarea>
                 </div>
+                <input type="hidden" name="_subject" value="New Registration for Kids Scratch Programming Workshop">
+                <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html">
                 <div class="flex items-center justify-between">
-                    <button class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+                    <button type="submit" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
                         Submit Registration
                     </button>
                 </div>
